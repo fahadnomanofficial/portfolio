@@ -1,0 +1,23 @@
+.contact-channels { width: 100%; max-width: 440px; }
+.contact-channel-row { display: grid; grid-template-columns: repeat(6,minmax(44px,1fr)); align-items: center; gap: clamp(2px,1vw,9px); min-height: 76px; }
+.contact-channel-icon { display: grid; place-items: center; width: 100%; max-width: 58px; min-height: 48px; aspect-ratio: 1; padding: 0; border: 1px solid var(--border); border-radius: 15px; color: var(--accent); background: var(--surface,var(--background)); cursor: pointer; transition: background .2s,border-color .2s; }
+.contact-channel-icon[hidden] { display: none; }
+.contact-channel-icon:hover,.contact-channel-icon[aria-expanded="true"] { border-color: var(--accent); background: color-mix(in srgb,var(--accent) 7%,transparent); }
+.contact-channel-row[data-expanded="true"] { display: flex; gap: 0; }
+.contact-channel-row[data-expanded="true"] .contact-channel-icon { flex: 0 0 48px; border-radius: 15px 0 0 15px; height: 76px; border-right: 0; }
+.contact-channel-details { flex: 1; min-width: 0; min-height: 76px; display: flex; flex-direction: column; justify-content: center; padding: 10px 12px; border: 1px solid var(--accent); border-left: 0; border-radius: 0 15px 15px 0; background: color-mix(in srgb,var(--accent) 7%,transparent); animation: contact-reveal .25s ease both; }
+.contact-channel-details > span { color: var(--accent); font: 10px/1.6 var(--font-mono); text-transform: uppercase; letter-spacing: .06em; }
+.contact-channel-details a { display: flex; align-items: center; gap: 5px; color: var(--foreground); font-size: 13px; line-height: 1.6; }
+.contact-channel-details a span { overflow-wrap: anywhere; }
+.contact-channel-details a svg { flex-shrink: 0; color: var(--accent); }
+.contact-channel-folder { flex: 0 0 52px; position: relative; height: 60px; margin-left: 10px; padding: 0; color: var(--accent); cursor: pointer; }
+.contact-folder-outline { width: 52px; height: 52px; stroke-width: 1; fill: color-mix(in srgb,var(--accent) 12%,var(--background)); }
+.contact-folder-icons { position: absolute; inset: 23px 9px 15px; display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; }
+.contact-folder-icons svg { width: 9px; height: 9px; }
+.contact-channel-folder:hover { color: var(--foreground); }
+.contact-channel-location { display: flex; align-items: center; gap: 9px; margin-top: 14px; color: var(--muted-foreground); font-size: 12px; font-style: normal; }
+.contact-channel-location svg { color: var(--accent); }
+.contact-channels :is(button,a):focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+@keyframes contact-reveal { from { opacity: 0; transform: translateX(-10px); } to { opacity: 1; transform: translateX(0); } }
+@media (max-width: 380px) { .contact-channel-row { gap: 2px; }.contact-channel-icon { border-radius: 12px; }.contact-channel-details { padding-inline: 8px; }.contact-channel-details a { font-size: 12px; }.contact-channel-folder { margin-left: 6px; } }
+@media (prefers-reduced-motion: reduce) { .contact-channel-details { animation: none; }.contact-channel-icon { transition: none; } }

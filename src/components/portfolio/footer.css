@@ -1,0 +1,75 @@
+.studio-footer { background: var(--surface); color: var(--foreground); border-top: 1px solid var(--border); padding: 36px 5.2vw 16px; }
+.studio-footer-inner { max-width: 1280px; margin: 0 auto; }
+.footer-invitation { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 32px; border-radius: 12px; background: var(--accent); color: var(--accent-foreground); }
+.footer-eyebrow { font: 10px/1.4 var(--font-mono); letter-spacing: .12em; }
+.footer-invitation h2 { margin-top: 8px; font: 500 clamp(28px,3.1vw,42px)/1.12 var(--font-display); letter-spacing: -.045em; }
+.footer-invitation p { margin-top: 10px; font-size: 13px; line-height: 1.6; }
+.footer-project-link { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; flex-shrink: 0; min-height: 48px; padding: 0 20px; border-radius: 7px; background: var(--accent-foreground); color: var(--accent); font-size: 14px; }
+.portfolio-studio .footer-invitation a:focus-visible { outline-color: var(--accent-foreground); }
+.footer-main { display: grid; grid-template-columns: 1.2fr .85fr 1fr; gap: 48px; padding: 36px 0 28px; }
+.footer-main > * { min-width: 0; }
+.footer-brand { display: inline-flex; align-items: baseline; min-height: 36px; font: 500 23px/1.3 var(--font-display); letter-spacing: -.04em; }
+.footer-brand > span { color: var(--accent); }
+.footer-identity > p, .footer-newsletter > p { color: var(--muted-foreground); font-size: 13px; line-height: 1.75; }
+.footer-identity > p { margin: 5px 0 12px; }
+.footer-email { display: flex; align-items: center; gap: 9px; width: fit-content; max-width: 100%; min-height: 44px; font-size: 13px; }
+.footer-email svg, .footer-location svg { flex-shrink: 0; color: var(--accent); }
+.footer-email > span { overflow-wrap: anywhere; }
+.footer-location { display: flex; align-items: center; gap: 9px; margin: 4px 0 16px; color: var(--muted-foreground); font-size: 11px; line-height: 1.6; }
+.footer-socials { display: flex; gap: 8px; }
+.footer-socials > a { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 8px; }
+.footer-main h3 { margin: 5px 0 14px; font: 500 16px/1.5 var(--font-display); }
+.footer-explore > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 24px; }
+.footer-explore a { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 44px; font-size: 13px; color: var(--muted-foreground); }
+.footer-explore a svg { color: var(--muted-foreground); }
+.footer-newsletter > p { margin-top: -3px; max-width: 34ch; }
+.footer-newsletter form { margin-top: 18px; }
+.footer-subscribe-field { display: flex; padding: 5px; gap: 5px; border: 1px solid var(--border); border-radius: 8px; background: var(--background); }
+.footer-subscribe-field input { min-width: 0; width: 100%; flex: 1; padding: 0 9px; color: var(--foreground); background: transparent; font-size: 16px; }
+.footer-subscribe-field input::placeholder { color: var(--muted-foreground); font-size: 13px; }
+.footer-subscribe-field button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 72px; min-height: 44px; padding: 0 12px; background: var(--accent); color: var(--accent-foreground); border-radius: 5px; font-size: 13px; cursor: pointer; }
+.footer-subscribe-field :disabled { opacity: .65; cursor: default; }
+.footer-subscribe-note { margin-top: 10px; color: var(--muted-foreground); font-size: 11px; line-height: 1.8; }
+.footer-subscribe-note a { text-decoration: underline; text-underline-offset: 3px; }
+.footer-subscribe-status { margin-top: 8px; color: var(--accent); font-size: 12px; line-height: 1.6; }
+.footer-subscribe-status:empty { display: none; }
+.footer-subscribe-status[data-error] { color: var(--foreground); }
+.footer-bottom { display: flex; align-items: center; gap: 28px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted-foreground); font-size: 11px; }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a, .footer-bottom > button { display: inline-flex; align-items: center; min-height: 44px; }
+.footer-bottom > button { margin-left: auto; gap: 10px; color: var(--foreground); cursor: pointer; }
+@media (hover:hover) {
+  .footer-socials > a:hover { border-color: var(--accent); color: var(--accent); }
+  .footer-explore a:hover, .footer-email:hover, .footer-legal a:hover, .footer-bottom > button:hover { color: var(--accent); }
+  .footer-project-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+}
+@media (max-width: 1000px) and (min-width: 768px) {
+  .footer-main { grid-template-columns: 1.1fr .9fr; gap: 28px 48px; }
+  .footer-newsletter { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 48px; align-items: start; }
+  .footer-newsletter > h3 { grid-column: 1; }
+  .footer-newsletter > p { grid-column: 1; }
+  .footer-newsletter > form { grid-column: 2; grid-row: 1 / 3; margin-top: 0; }
+}
+@media (max-width: 767px) {
+  .studio-footer { padding: 24px 22px 16px; }
+  .footer-invitation { flex-direction: column; align-items: stretch; gap: 20px; padding: 24px; }
+  .footer-invitation h2 { max-width: 12ch; font-size: 32px; }
+  .footer-invitation p { font-size: 12px; }
+  .footer-project-link { min-height: 48px; }
+  .footer-main { grid-template-columns: 1fr; gap: 24px; padding: 28px 0 24px; }
+  .footer-identity > p { font-size: 12px; }
+  .footer-location { margin-bottom: 12px; }
+  .footer-main h3 { margin-top: 0; margin-bottom: 8px; }
+  .footer-explore > div { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 0 18px; }
+  .footer-explore a { font-size: 12px; }
+  .footer-newsletter > p { max-width: 42ch; font-size: 12px; }
+  .footer-newsletter form { margin-top: 14px; }
+  .footer-bottom { flex-wrap: wrap; gap: 0 20px; padding-top: 14px; }
+  .footer-bottom > span { flex-basis: 100%; line-height: 2; }
+  .footer-legal { gap: 20px; }
+}
+@media (max-width: 360px) {
+  .footer-invitation { padding: 20px; }
+  .footer-invitation h2 { font-size: 29px; }
+  .footer-explore > div { column-gap: 12px; }
+}

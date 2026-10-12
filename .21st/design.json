@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "project": {
+    "name": "Fahad Al Noman Portfolio",
+    "productType": "Personal developer portfolio",
+    "stack": [
+      "react",
+      "tailwind-v4",
+      "vite"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/components/portfolio/studio.css"
+    ],
+    "components": [],
+    "assets": [],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "dark",
+    "colors": {
+      "accent": "#d2fa69",
+      "background": "#0c0f0e",
+      "foreground": "#f2f3ed",
+      "surface": "#151916"
+    },
+    "typography": {},
+    "spacing": {},
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "spacious"
+  },
+  "components": {
+    "installed": [],
+    "preferredPrimitives": [
+      "radix-ui"
+    ],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    "Keep Continue/Skip popup silent: cut the October 12 intro at 7.76 seconds within the measured pause after customers, before any sound of Choose. Publish the shortened clip as intro-silent-choice-20261012.mp3 to avoid reuse of the earlier media URL; preserve the modal and Continue/Skip behavior.",
+    "Latest user correction restores a single Continue tour / Skip tour modal after the introduction ends. Pause at the hero until the visitor decides. Continue starts services and the remaining chapters flow automatically; Skip or Escape stops audio and unlocks the page. Use installed Radix Dialog for modal focus. Keep the floating player removed, the standalone Skip button during playback, per-reload autoplay attempts, scroll/tap retries, portrait and highlights.",
+    "Hero uses the supplied dots-and-lines SVG on the left, with gentle floating and masked light motion that pauses offscreen and respects reduced motion. Mobile keeps a compact portrait beside the service summary, then the introduction and app rail. Retry blocked audio immediately on trusted wheel, touch-scroll and page-key input, retaining a tap fallback when browser sound policy requires it. Skip ends retries until the next homepage mount.",
+    "Current voice UX supersedes the floating player and intro choice: attempt audio on every homepage load or reload, silently retry on a trusted page tap if blocked, and show just Skip on desktop during the continuous tour. Lock the application root, clicks, wheel/touch scrolling and page keys on all viewports; keep only noninteractive mobile captions. Release on Skip, completion, error or unmount. Trim the obsolete spoken choice from the intro; preserve section/card highlights. Use the supplied October 12 black-and-white portrait in both About views.",
+    "Blog redesigned as a compact dark editorial library: lime business-focused heading, one featured story, three/two/one-column article cards, horizontally scrolling category buttons, shareable search/tag/sort filters, nine-item progressive loading, native controls, cover fallbacks, and honest loading/empty/retry states. Reuse the shared header/footer and real published CMS articles; match crawler metadata and CollectionPage schema.",
+    "October 12 recording replaces the old tour with six timed chapters (148.92 seconds), choice at 7.98 seconds, all eight services and seven featured project highlights, automation icon reveals, mobile captions, occasional lime phrase emphasis, and restrained speaking animation. Homepage order follows services, portfolio, automation examples, about, contact. Reduced motion retains continuous playback with instant section navigation.",
+    "Shared footer redesigned for desktop and mobile: compact lime project invitation, dark contact/navigation/newsletter columns, real social links and location, accessible inline subscription feedback, legal links, and a page-local Back to top button.",
+    "Dedicated About and Services pages have cross-links; Portfolio lists all 13 saved projects. Homepage adds Explore all services and a final View more link in the portfolio dropdown. Use word-aligned service IDs to highlight and reveal named service cards on mobile. Automation examples use three alternating native scroll rails on desktop and mobile.",
+    "Homepage contact becomes a compact five-question enquiry chat: name, email, phone, explicit WhatsApp Yes/No, project brief, then editable review and Send. Keep real contact API, errors and loading. Compact process and FAQ spacing on desktop and mobile.",
+    "Hide the completed voice tour panel. Contact has six icons in one row, an attached detail panel on hover or tap, a folder containing the remaining icons, and location below. Folder and Escape restore the row.",
+    "Remove collapsed Laura launcher. Mobile services become one swipeable card row; automation examples use three native scroll rails with alternating movement (left-to-right, right-to-left, left-to-right), manual interaction pauses, and reduced-motion support. Portfolio’s more-work disclosure is full width with comfortable mobile link targets.",
+    "Voice question at 9.78 seconds opens a centered choice popup. Mobile playback uses an inert page and scroll shield with a 44px Skip button below the right side of the header; the choice popup provides Continue tour and Explore by own. Use installed Radix Dialog for focus management and the existing studio palette.",
+    "Hero service heading grows to 24–34px and description to 13–14px, with worldwide copy and no Malta reference. Laura typewriter shrinks and starts only with actual voice playback. Remove duplicate hero tour and motion buttons; hide portfolio scrollbar and scroll hint while retaining navigation arrows.",
+    "Twenty business automation examples sit between services and portfolio in seven desktop columns (7/7/6), five on tablet and three on mobile. Reuse hero app icon size, palette, radius and Lucide icons; keep wrapped labels and compact spacing.",
+    "Header retains the portfolio title and adds a right-aligned Blog link. Homepage uses a visible descriptive H1, concise Malta/worldwide service copy, and native FAQ disclosures while preserving the typed Laura introduction.",
+    "Services use a compact eight-card grid with Motion entrance and hover interactions. Portfolio uses small horizontal scroll cards; the audio caption timestamps select and reveal each named project with a lime highlight.",
+    "Header shows only Fahad’s Portfolio. Compact hero spacing with one continuously scrolling row of colorful app-style service icons beneath the typewriter; pause on hover or keyboard focus and honor reduced motion.",
+    "User explicitly requested a unique design instead of preserving the live site.",
+    "Ink background, acid lime, oversized centered typing, slow wireframe orbital geometry.",
+    "Open service rows, staggered project previews, grayscale portrait, lime footer.",
+    "Attempt audible autoplay on homepage mount; wait silently if blocked and start on a trusted page tap, without a Start audio panel.",
+    "Use installed Motion for interactions; CSS and SVG for the ambient orbit. Honor reduced motion and pause controls."
+  ],
+  "evidence": [
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:vite",
+      "source": "package.json"
+    }
+  ],
+  "generatedAt": "2026-10-11T15:09:59.507Z"
+}
