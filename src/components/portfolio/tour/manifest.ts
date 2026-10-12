@@ -1,13 +1,13 @@
 export type Caption = { start: number; end: number; text: string; highlight?: string; serviceId?: string; automationIds?: number[]; emphasis?: string[] };
 export type Chapter = { id: string; title: string; src: string; duration: number; offset: number; choiceAt?: number; captions: Caption[] };
 
-// October 12 recording: intro ends in silence before the Continue/Skip instruction.
+// October 12 recording: spoken Continue/Skip instruction, then the intro choice popup.
 export const CHAPTERS: Chapter[] = [
   {
     "id": "top",
     "title": "Introduction",
-    "src": "/audio/laura/intro-silent-choice-20261012.mp3",
-    "duration": 7.76,
+    "src": "/audio/laura/intro-with-choice-20261012.mp3",
+    "duration": 12.009,
     "offset": 0,
     "captions": [
       {
@@ -30,7 +30,23 @@ export const CHAPTERS: Chapter[] = [
           "attract more customers"
         ],
         "start": 5.58,
-        "end": 7.76
+        "end": 7.98
+      },
+      {
+        "text": "Choose Continue tour for a quick look around,",
+        "emphasis": [
+          "Continue tour"
+        ],
+        "start": 7.98,
+        "end": 10.109
+      },
+      {
+        "text": "or Skip to explore on your own.",
+        "emphasis": [
+          "Skip"
+        ],
+        "start": 10.109,
+        "end": 12.009
       }
     ]
   },
@@ -39,7 +55,7 @@ export const CHAPTERS: Chapter[] = [
     "title": "Services",
     "src": "/audio/laura/services-20261012.mp3",
     "duration": 20.392,
-    "offset": 7.76,
+    "offset": 12.009,
     "captions": [
       {
         "text": "We build websites",
@@ -146,7 +162,7 @@ export const CHAPTERS: Chapter[] = [
     "title": "Featured projects",
     "src": "/audio/laura/work-20261012.mp3",
     "duration": 27.926,
-    "offset": 28.152,
+    "offset": 32.401,
     "captions": [
       {
         "text": "Before choosing someone to build for your business,",
@@ -270,7 +286,7 @@ export const CHAPTERS: Chapter[] = [
     "title": "Business automation",
     "src": "/audio/laura/automation-20261012.mp3",
     "duration": 35.262,
-    "offset": 56.078,
+    "offset": 60.327,
     "captions": [
       {
         "text": "Think about the tasks your team repeats every day.",
@@ -454,7 +470,7 @@ export const CHAPTERS: Chapter[] = [
     "title": "About",
     "src": "/audio/laura/about-20261012.mp3",
     "duration": 27.201,
-    "offset": 91.34,
+    "offset": 95.589,
     "captions": [
       {
         "text": "Good results start with understanding your business.",
@@ -535,7 +551,7 @@ export const CHAPTERS: Chapter[] = [
     "title": "Let’s talk",
     "src": "/audio/laura/contact-20261012.mp3",
     "duration": 26.13,
-    "offset": 118.541,
+    "offset": 122.79,
     "captions": [
       {
         "text": "What would you like to improve in your business?",

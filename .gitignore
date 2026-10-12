@@ -10,6 +10,13 @@ lerna-debug.log*
 # Dependencies
 node_modules/
 
+# Exclude the complete admin application from this repository
+/admin-panel/
+
+# Admin Panel subproject build artifacts
+admin-panel/node_modules/
+admin-panel/dist/
+
 # Production builds
 dist/
 dist-ssr/
